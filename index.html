@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#090909" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Crate King" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="apple-touch-icon" href="assets/icon.png" />
+  <title>Crate King</title>
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/room.css" />
+  <link rel="stylesheet" href="css/market.css" />
+</head>
+<body>
+  <div class="game-app">
+    <aside class="sidebar">
+      <div class="brand">
+        <span>Turntable Collector</span>
+        <h1>Crate King</h1>
+        <p>V2 Foundation</p>
+      </div>
+
+      <nav class="nav">
+        <button class="nav-btn active" data-screen="dashboard">Dashboard</button>
+        <button class="nav-btn" data-screen="market">Dealers</button>
+        <button class="nav-btn" data-screen="collection">Collection</button>
+        <button class="nav-btn" data-screen="artists">Artists</button>
+        <button class="nav-btn" data-screen="auctions">Auctions</button>
+        <button class="nav-btn" data-screen="rivals">Rivals</button>
+        <button class="nav-btn" data-screen="leaderboards">Leaderboards</button>
+        <button class="nav-btn" data-screen="listening">Listening</button>
+        <button class="nav-btn" data-screen="room">Music Room</button>
+        <button class="nav-btn" data-screen="achievements">Achievements</button>
+        <button class="nav-btn" data-screen="stats">Statistics</button>
+      </nav>
+
+      <div class="side-panel">
+        <div><small>Cash</small><strong id="sideCash">$0</strong></div>
+        <div><small>Day</small><strong id="sideDay">1</strong></div>
+        <button id="nextDayBtn">Next Day</button>
+        <button id="resetBtn" class="ghost">Reset</button>
+      </div>
+    </aside>
+
+    <main class="screen-wrap">
+      <section id="dashboard" class="screen active-screen">
+        <div class="hero-scene">
+          <div>
+            <span class="kicker">Collector HQ</span>
+            <h2>Build the ultimate vinyl collection.</h2>
+            <p>Visit dealers, find hidden gems, upgrade your listening room, and climb the collector ranks.</p>
+          </div>
+          <div class="vinyl-hero"><div></div></div>
+        </div>
+
+        <div class="stat-grid">
+          <article><span>Cash</span><strong id="cash">$0</strong></article>
+          <article><span>Day</span><strong id="day">1</strong></article>
+          <article><span>Reputation</span><strong id="reputation">0</strong></article>
+          <article><span>Rank</span><strong id="rank">Beginner</strong></article>
+          <article><span>Collection Value</span><strong id="collectionValue">$0</strong></article>
+        </div>
+
+        <div class="dashboard-grid">
+          <article class="panel">
+            <h3>Weekly Event</h3>
+            <p id="weeklyEvent">No special event today.</p>
+            <button id="crateDigBtn">Crate Dig — $15</button>
+          </article>
+          <article class="panel">
+            <h3>Current Goal</h3>
+            <p id="currentGoal">Buy your first record.</p>
+          </article>
+          <article class="panel">
+            <h3>Latest News</h3>
+            <p id="latestNews">Local dealers are restocking their crates.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="market" class="screen">
+        <header class="screen-head">
+          <div><span class="kicker">Dealer Network</span><h2>Choose a location</h2></div>
+          <button id="refreshMarketBtn">Next Day / Restock</button>
+        </header>
+        <div id="dealerList" class="dealer-grid"></div>
+        <div class="panel market-stock-panel">
+          <div class="screen-head compact"><div><span class="kicker" id="activeDealerType">Local Shop</span><h3 id="activeDealerName">Dealer Stock</h3></div></div>
+          <div id="marketList" class="record-grid"></div>
+        </div>
+      </section>
+
+      <section id="collection" class="screen">
+        <header class="screen-head"><div><span class="kicker">Personal Library</span><h2>Your Collection</h2></div></header>
+        <div id="collectionSummary" class="summary-card"></div>
+        <div id="collectionList" class="album-grid"></div>
+      </section>
+
+
+
+      <section id="artists" class="screen">
+        <header class="screen-head">
+          <div><span class="kicker">Artist Collections</span><h2>Complete artist sets</h2></div>
+        </header>
+        <div class="phase-grid" id="artistCollections"></div>
+      </section>
+
+      <section id="auctions" class="screen">
+        <header class="screen-head">
+          <div><span class="kicker">Auction House</span><h2>Bid against rival collectors</h2></div>
+          <button id="refreshAuctionsBtn">New Auction Lots</button>
+        </header>
+        <div id="auctionList" class="auction-grid"></div>
+      </section>
+
+      <section id="rivals" class="screen">
+        <header class="screen-head">
+          <div><span class="kicker">Rival Collectors</span><h2>Compete for reputation</h2></div>
+          <button id="rivalChallengeBtn">Challenge Top Rival</button>
+        </header>
+        <div id="rivalList" class="rival-grid"></div>
+      </section>
+
+      <section id="leaderboards" class="screen">
+        <header class="screen-head">
+          <div><span class="kicker">Collector League</span><h2>Leaderboards</h2></div>
+        </header>
+        <div id="leaderboardList" class="leaderboard-list"></div>
+      </section>
+
+      <section id="listening" class="screen">
+        <header class="screen-head"><div><span class="kicker">Listening Lounge</span><h2>Play records, gain mastery</h2></div></header>
+        <div class="two-col">
+          <article class="panel"><h3>Choose a Record</h3><div id="listenList" class="pill-list"></div></article>
+          <article class="panel"><h3>Genre Expertise</h3><div id="expertiseList" class="expertise-list"></div></article>
+        </div>
+      </section>
+
+      <section id="room" class="screen">
+        <header class="screen-head"><div><span class="kicker">Room Builder</span><h2>Your Music Room</h2></div></header>
+        <div class="room-layout">
+          <div class="music-room" id="musicRoom">
+            <div class="room-wall"><div class="poster"></div><div class="wall-light"></div></div>
+            <div class="shelf"><span></span><span></span><span></span><span></span><span></span></div>
+            <div class="turntable"><div class="platter"></div><div class="tonearm"></div></div>
+            <div class="speaker speaker-left"></div><div class="speaker speaker-right"></div>
+            <div class="plant"></div>
+            <div class="room-floor"></div>
+          </div>
+          <div class="panel"><h3>Upgrades</h3><div id="upgradeList" class="upgrade-list"></div></div>
+        </div>
+      </section>
+
+      <section id="achievements" class="screen">
+        <header class="screen-head"><div><span class="kicker">Progress</span><h2>Achievements</h2></div></header>
+        <div id="achievementList" class="achievement-grid"></div>
+      </section>
+
+      <section id="stats" class="screen">
+        <header class="screen-head"><div><span class="kicker">Analytics</span><h2>Collector Statistics</h2></div></header>
+        <div id="statsPanel" class="stat-grid wide"></div>
+      </section>
+    </main>
+  </div>
+
+  <div id="toast" class="toast"></div>
+  <div id="revealModal" class="modal hidden"><div class="modal-card"><span class="kicker">Appraisal Result</span><h2 id="modalTitle"></h2><p id="modalText"></p><button id="modalClose">Continue</button></div></div>
+  <script type="module" src="js/app.js"></script>
+  <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", () => {
+        navigator.serviceWorker.register("service-worker.js").catch(console.warn);
+      });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+[
+  {"id":"local","name":"Local Record Shop","type":"Everyday Finds","desc":"Balanced stock, fair prices, beginner friendly.","genre":"All","price":1,"rare":1,"unlock":0},
+  {"id":"vintage","name":"Vintage Dealer","type":"Older Pressings","desc":"Better condition and higher chance of rare classics.","genre":"Rock","price":1.25,"rare":1.35,"unlock":40},
+  {"id":"jazz","name":"Jazz Specialist","type":"Curated Jazz","desc":"Expensive but excellent for Jazz mastery.","genre":"Jazz","price":1.35,"rare":1.45,"unlock":80},
+  {"id":"warehouse","name":"Rock Warehouse","type":"Bulk Crates","desc":"More records, mixed condition, occasional gems.","genre":"Rock","price":.9,"rare":1.15,"unlock":120},
+  {"id":"collector","name":"Private Collector","type":"Premium Stock","desc":"Rare and legendary stock for respected collectors.","genre":"All","price":1.55,"rare":2,"unlock":250}
+]

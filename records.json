@@ -1,0 +1,20 @@
+[
+  {"artist":"Fleetwood Mac","album":"Rumours","genre":"Rock","year":1977,"series":"Fleetwood Mac"},
+  {"artist":"Fleetwood Mac","album":"Tusk","genre":"Rock","year":1979,"series":"Fleetwood Mac"},
+  {"artist":"Pink Floyd","album":"The Dark Side of the Moon","genre":"Rock","year":1973,"series":"Pink Floyd"},
+  {"artist":"Pink Floyd","album":"Wish You Were Here","genre":"Rock","year":1975,"series":"Pink Floyd"},
+  {"artist":"Miles Davis","album":"Kind of Blue","genre":"Jazz","year":1959,"series":"Miles Davis"},
+  {"artist":"John Coltrane","album":"A Love Supreme","genre":"Jazz","year":1965,"series":"John Coltrane"},
+  {"artist":"Michael Jackson","album":"Thriller","genre":"Pop","year":1982,"series":"Michael Jackson"},
+  {"artist":"Prince","album":"Purple Rain","genre":"Pop","year":1984,"series":"Prince"},
+  {"artist":"The Beatles","album":"Abbey Road","genre":"Rock","year":1969,"series":"The Beatles"},
+  {"artist":"The Beatles","album":"White Album","genre":"Rock","year":1968,"series":"The Beatles"},
+  {"artist":"Nirvana","album":"Nevermind","genre":"Grunge","year":1991,"series":"Nirvana"},
+  {"artist":"Daft Punk","album":"Discovery","genre":"Electronic","year":2001,"series":"Daft Punk"},
+  {"artist":"Metallica","album":"Master of Puppets","genre":"Metal","year":1986,"series":"Metallica"},
+  {"artist":"Black Sabbath","album":"Paranoid","genre":"Metal","year":1970,"series":"Black Sabbath"},
+  {"artist":"Bob Marley","album":"Legend","genre":"Reggae","year":1984,"series":"Bob Marley"},
+  {"artist":"Stevie Wonder","album":"Songs in the Key of Life","genre":"Soul","year":1976,"series":"Stevie Wonder"},
+  {"artist":"Wu-Tang Clan","album":"Enter the Wu-Tang","genre":"Hip-Hop","year":1993,"series":"Wu-Tang Clan"},
+  {"artist":"Kendrick Lamar","album":"To Pimp a Butterfly","genre":"Hip-Hop","year":2015,"series":"Kendrick Lamar"}
+]
